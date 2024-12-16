@@ -6,9 +6,9 @@
 //
 
 import Testing
-@testable import match_tracker_watch_standalone_Watch_App
+@testable import match_tracker_watch_Watch_App
 
-struct match_tracker_watch_standalone_Watch_AppTests {
+struct match_tracker_watch_Watch_AppTests {
 
     @Test func example() async throws {
         // Write your test here and use APIs like `#expect(...)` to check expected conditions.
