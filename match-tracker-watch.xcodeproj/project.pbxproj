@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CE28A852D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0CE28A842D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0CE28A852D0FC71A007C4B58 /* match-tracker-watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0CE28A842D0FC71A007C4B58 /* match-tracker-watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0CE28A852D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app in Embed Watch Content */,
+				0CE28A852D0FC71A007C4B58 /* match-tracker-watch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,10 +49,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch-standalone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "match-tracker-watch-standalone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CE28A842D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "match-tracker-watch-standalone Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CE28A962D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "match-tracker-watch-standalone Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CE28AA02D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "match-tracker-watch-standalone Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "match-tracker-watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE28A842D0FC71A007C4B58 /* match-tracker-watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "match-tracker-watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE28A962D0FC71B007C4B58 /* match-tracker-watch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "match-tracker-watch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE28AA02D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "match-tracker-watch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -111,10 +111,10 @@
 		0CE28A7F2D0FC71A007C4B58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch-standalone.app */,
-				0CE28A842D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app */,
-				0CE28A962D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests.xctest */,
-				0CE28AA02D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests.xctest */,
+				0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch.app */,
+				0CE28A842D0FC71A007C4B58 /* match-tracker-watch Watch App.app */,
+				0CE28A962D0FC71B007C4B58 /* match-tracker-watch Watch AppTests.xctest */,
+				0CE28AA02D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CE28A7D2D0FC71A007C4B58 /* match-tracker-watch-standalone */ = {
+		0CE28A7D2D0FC71A007C4B58 /* match-tracker-watch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE28AAE2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone" */;
+			buildConfigurationList = 0CE28AAE2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch" */;
 			buildPhases = (
 				0CE28A7C2D0FC71A007C4B58 /* Resources */,
 				0CE28AAD2D0FC71B007C4B58 /* Embed Watch Content */,
@@ -134,16 +134,16 @@
 			dependencies = (
 				0CE28A872D0FC71A007C4B58 /* PBXTargetDependency */,
 			);
-			name = "match-tracker-watch-standalone";
+			name = "match-tracker-watch";
 			packageProductDependencies = (
 			);
 			productName = "match-tracker-watch-standalone";
-			productReference = 0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch-standalone.app */;
+			productReference = 0CE28A7E2D0FC71A007C4B58 /* match-tracker-watch.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		0CE28A832D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */ = {
+		0CE28A832D0FC71A007C4B58 /* match-tracker-watch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE28AAA2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch App" */;
+			buildConfigurationList = 0CE28AAA2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch App" */;
 			buildPhases = (
 				0CE28A802D0FC71A007C4B58 /* Sources */,
 				0CE28A812D0FC71A007C4B58 /* Frameworks */,
@@ -156,16 +156,16 @@
 			fileSystemSynchronizedGroups = (
 				0CE28A882D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */,
 			);
-			name = "match-tracker-watch-standalone Watch App";
+			name = "match-tracker-watch Watch App";
 			packageProductDependencies = (
 			);
 			productName = "match-tracker-watch-standalone Watch App";
-			productReference = 0CE28A842D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App.app */;
+			productReference = 0CE28A842D0FC71A007C4B58 /* match-tracker-watch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0CE28A952D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */ = {
+		0CE28A952D0FC71B007C4B58 /* match-tracker-watch Watch AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE28AB12D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch AppTests" */;
+			buildConfigurationList = 0CE28AB12D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch AppTests" */;
 			buildPhases = (
 				0CE28A922D0FC71B007C4B58 /* Sources */,
 				0CE28A932D0FC71B007C4B58 /* Frameworks */,
@@ -179,16 +179,16 @@
 			fileSystemSynchronizedGroups = (
 				0CE28A992D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */,
 			);
-			name = "match-tracker-watch-standalone Watch AppTests";
+			name = "match-tracker-watch Watch AppTests";
 			packageProductDependencies = (
 			);
 			productName = "match-tracker-watch-standalone Watch AppTests";
-			productReference = 0CE28A962D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests.xctest */;
+			productReference = 0CE28A962D0FC71B007C4B58 /* match-tracker-watch Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0CE28A9F2D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */ = {
+		0CE28A9F2D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE28AB42D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch AppUITests" */;
+			buildConfigurationList = 0CE28AB42D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch AppUITests" */;
 			buildPhases = (
 				0CE28A9C2D0FC71B007C4B58 /* Sources */,
 				0CE28A9D2D0FC71B007C4B58 /* Frameworks */,
@@ -202,11 +202,11 @@
 			fileSystemSynchronizedGroups = (
 				0CE28AA32D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */,
 			);
-			name = "match-tracker-watch-standalone Watch AppUITests";
+			name = "match-tracker-watch Watch AppUITests";
 			packageProductDependencies = (
 			);
 			productName = "match-tracker-watch-standalone Watch AppUITests";
-			productReference = 0CE28AA02D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests.xctest */;
+			productReference = 0CE28AA02D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CE28A7B2D0FC71A007C4B58 /* Build configuration list for PBXProject "match-tracker-watch-standalone" */;
+			buildConfigurationList = 0CE28A7B2D0FC71A007C4B58 /* Build configuration list for PBXProject "match-tracker-watch" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -249,10 +249,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CE28A7D2D0FC71A007C4B58 /* match-tracker-watch-standalone */,
-				0CE28A832D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */,
-				0CE28A952D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */,
-				0CE28A9F2D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */,
+				0CE28A7D2D0FC71A007C4B58 /* match-tracker-watch */,
+				0CE28A832D0FC71A007C4B58 /* match-tracker-watch Watch App */,
+				0CE28A952D0FC71B007C4B58 /* match-tracker-watch Watch AppTests */,
+				0CE28A9F2D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,17 +315,17 @@
 /* Begin PBXTargetDependency section */
 		0CE28A872D0FC71A007C4B58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */;
+			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch Watch App */;
 			targetProxy = 0CE28A862D0FC71A007C4B58 /* PBXContainerItemProxy */;
 		};
 		0CE28A982D0FC71B007C4B58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */;
+			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch Watch App */;
 			targetProxy = 0CE28A972D0FC71B007C4B58 /* PBXContainerItemProxy */;
 		};
 		0CE28AA22D0FC71B007C4B58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */;
+			target = 0CE28A832D0FC71A007C4B58 /* match-tracker-watch Watch App */;
 			targetProxy = 0CE28AA12D0FC71B007C4B58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,20 +450,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch-standalone Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Match Tracker Standalone";
+				INFOPLIST_KEY_CFBundleDisplayName = Match;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -480,20 +481,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch-standalone Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Match Tracker Standalone";
+				INFOPLIST_KEY_CFBundleDisplayName = Match;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -552,7 +554,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/match-tracker-watch-standalone Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/match-tracker-watch-standalone Watch App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/match-tracker-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/match-tracker-watch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Debug;
@@ -572,7 +574,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/match-tracker-watch-standalone Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/match-tracker-watch-standalone Watch App";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/match-tracker-watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/match-tracker-watch Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 11.2;
 			};
@@ -620,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CE28A7B2D0FC71A007C4B58 /* Build configuration list for PBXProject "match-tracker-watch-standalone" */ = {
+		0CE28A7B2D0FC71A007C4B58 /* Build configuration list for PBXProject "match-tracker-watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE28AA82D0FC71B007C4B58 /* Debug */,
@@ -629,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE28AAA2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch App" */ = {
+		0CE28AAA2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE28AAB2D0FC71B007C4B58 /* Debug */,
@@ -638,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE28AAE2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone" */ = {
+		0CE28AAE2D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE28AAF2D0FC71B007C4B58 /* Debug */,
@@ -647,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE28AB12D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch AppTests" */ = {
+		0CE28AB12D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE28AB22D0FC71B007C4B58 /* Debug */,
@@ -656,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE28AB42D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch-standalone Watch AppUITests" */ = {
+		0CE28AB42D0FC71B007C4B58 /* Build configuration list for PBXNativeTarget "match-tracker-watch Watch AppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE28AB52D0FC71B007C4B58 /* Debug */,
