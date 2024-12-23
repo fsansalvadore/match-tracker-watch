@@ -1,13 +1,13 @@
 //
-//  match_tracker_watch_standalone_Watch_AppUITests.swift
-//  match-tracker-watch-standalone Watch AppUITests
+//  match_tracker_watch_Watch_AppUITests.swift
+//  match-tracker-watch Watch AppUITests
 //
 //  Created by Francesco Sansalvadore on 15/12/24.
 //
 
 import XCTest
 
-final class match_tracker_watch_standalone_Watch_AppUITests: XCTestCase {
+final class match_tracker_watch_Watch_AppUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

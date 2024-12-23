@@ -56,19 +56,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0CE28A882D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */ = {
+		0CE28A882D0FC71A007C4B58 /* match-tracker-watch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "match-tracker-watch-standalone Watch App";
+			path = "match-tracker-watch Watch App";
 			sourceTree = "<group>";
 		};
-		0CE28A992D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */ = {
+		0CE28A992D0FC71B007C4B58 /* match-tracker-watch Watch AppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "match-tracker-watch-standalone Watch AppTests";
+			path = "match-tracker-watch Watch AppTests";
 			sourceTree = "<group>";
 		};
-		0CE28AA32D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */ = {
+		0CE28AA32D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "match-tracker-watch-standalone Watch AppUITests";
+			path = "match-tracker-watch Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -101,9 +101,9 @@
 		0CE28A772D0FC71A007C4B58 = {
 			isa = PBXGroup;
 			children = (
-				0CE28A882D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */,
-				0CE28A992D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */,
-				0CE28AA32D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */,
+				0CE28A882D0FC71A007C4B58 /* match-tracker-watch Watch App */,
+				0CE28A992D0FC71B007C4B58 /* match-tracker-watch Watch AppTests */,
+				0CE28AA32D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests */,
 				0CE28A7F2D0FC71A007C4B58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0CE28A882D0FC71A007C4B58 /* match-tracker-watch-standalone Watch App */,
+				0CE28A882D0FC71A007C4B58 /* match-tracker-watch Watch App */,
 			);
 			name = "match-tracker-watch Watch App";
 			packageProductDependencies = (
@@ -177,7 +177,7 @@
 				0CE28A982D0FC71B007C4B58 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				0CE28A992D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppTests */,
+				0CE28A992D0FC71B007C4B58 /* match-tracker-watch Watch AppTests */,
 			);
 			name = "match-tracker-watch Watch AppTests";
 			packageProductDependencies = (
@@ -200,7 +200,7 @@
 				0CE28AA22D0FC71B007C4B58 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				0CE28AA32D0FC71B007C4B58 /* match-tracker-watch-standalone Watch AppUITests */,
+				0CE28AA32D0FC71B007C4B58 /* match-tracker-watch Watch AppUITests */,
 			);
 			name = "match-tracker-watch Watch AppUITests";
 			packageProductDependencies = (
@@ -453,7 +453,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch-standalone Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -464,8 +464,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone.watchkitapp";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -484,7 +484,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch-standalone Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"match-tracker-watch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -495,8 +495,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone.watchkitapp";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -514,9 +514,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
-				INFOPLIST_KEY_CFBundleDisplayName = "match-tracker-watch-standalone";
+				INFOPLIST_KEY_CFBundleDisplayName = "match-tracker-watch";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -529,9 +529,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2ZW3VPNWZ5;
-				INFOPLIST_KEY_CFBundleDisplayName = "match-tracker-watch-standalone";
+				INFOPLIST_KEY_CFBundleDisplayName = "match-tracker-watch";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fsansalvadore.match-tracker-watch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

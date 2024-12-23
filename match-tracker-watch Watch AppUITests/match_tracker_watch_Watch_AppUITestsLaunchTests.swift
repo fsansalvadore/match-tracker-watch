@@ -1,13 +1,13 @@
 //
-//  match_tracker_watch_standalone_Watch_AppUITestsLaunchTests.swift
-//  match-tracker-watch-standalone Watch AppUITests
+//  match_tracker_watch_Watch_AppUITestsLaunchTests.swift
+//  match-tracker-watch Watch AppUITests
 //
 //  Created by Francesco Sansalvadore on 15/12/24.
 //
 
 import XCTest
 
-final class match_tracker_watch_standalone_Watch_AppUITestsLaunchTests: XCTestCase {
+final class match_tracker_watch_Watch_AppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

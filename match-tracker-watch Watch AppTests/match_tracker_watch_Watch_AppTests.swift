@@ -1,6 +1,6 @@
 //
-//  match_tracker_watch_standalone_Watch_AppTests.swift
-//  match-tracker-watch-standalone Watch AppTests
+//  match_tracker_watch_Watch_AppTests.swift
+//  match-tracker-watch Watch AppTests
 //
 //  Created by Francesco Sansalvadore on 15/12/24.
 //
