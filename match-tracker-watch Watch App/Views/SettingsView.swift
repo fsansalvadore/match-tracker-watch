@@ -59,7 +59,7 @@ struct SettingsView: View {
         }
 
         let playerResponse = try JSONDecoder().decode(PlayerResponse.self, from: data)
-        return playerResponse.data.map { Player(id: UUID(uuidString: String($0.id)) ?? UUID(), name: $0.name) }
+        return playerResponse.data.map { Player(id: $0.id, name: $0.name) }
     }
 }
 

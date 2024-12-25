@@ -12,13 +12,13 @@ class MatchSync {
             "league_id": 1,
             "team_a": [
                 "name": "Team A",
-                "players": match.teamA.map { ["id": $0.id.uuidString, "name": $0.name] },
-                "goals": match.goalsA.map { ["id": $0.id.uuidString, "team": "team_a", "playerId": $0.scorer.id.uuidString, "assistPlayerId": $0.assist?.id.uuidString ?? "", "timestamp": Date(timeIntervalSince1970: $0.timestamp).iso8601String] }
+                "players": match.teamA.map { ["id": $0.id] },
+                "goals": match.goalsA.map { ["playerId": $0.scorer.id, "assistPlayerId": $0.assist?.id ?? "", "timestamp": Date(timeIntervalSince1970: $0.timestamp).iso8601String] }
             ],
             "team_b": [
                 "name": "Team B",
-                "players": match.teamB.map { ["id": $0.id.uuidString, "name": $0.name] },
-                "goals": match.goalsB.map { ["id": $0.id.uuidString, "team": "team_b", "playerId": $0.scorer.id.uuidString, "assistPlayerId": $0.assist?.id.uuidString ?? "", "timestamp": Date(timeIntervalSince1970: $0.timestamp).iso8601String] }
+                "players": match.teamB.map { ["id": $0.id] },
+                "goals": match.goalsB.map { ["playerId": $0.scorer.id, "assistPlayerId": $0.assist?.id ?? "", "timestamp": Date(timeIntervalSince1970: $0.timestamp).iso8601String] }
             ]
         ]
         
@@ -26,7 +26,8 @@ class MatchSync {
         let jsonData = try JSONSerialization.data(withJSONObject: payload)
 
         // Create the URL
-        guard let url = URL(string: "https://match-tracker-web.vercel.app/api/create-match") else {
+        // guard let url = URL(string: "https://match-tracker-web.vercel.app/api/create-match") else {
+        guard let url = URL(string: "http://localhost:3000/api/create-match") else {
             throw URLError(.badURL)
         }
 
