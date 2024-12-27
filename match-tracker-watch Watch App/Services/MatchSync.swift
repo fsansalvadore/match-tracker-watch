@@ -25,9 +25,15 @@ class MatchSync {
         // Convert payload to JSON data
         let jsonData = try JSONSerialization.data(withJSONObject: payload)
 
+        // Check if we are in DEBUG mode
+        #if DEBUG
+        let debugMode = true
+        #else
+        let debugMode = false
+        #endif
+
         // Create the URL
-        // guard let url = URL(string: "https://match-tracker-web.vercel.app/api/create-match") else {
-        guard let url = URL(string: "http://localhost:3000/api/create-match") else {
+        guard let url = URL(string: debugMode ? "http://localhost:3000/api/create-match" : "https://match-tracker-web.vercel.app/api/create-match") else {
             throw URLError(.badURL)
         }
 

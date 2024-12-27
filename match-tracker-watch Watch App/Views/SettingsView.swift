@@ -47,8 +47,15 @@ struct SettingsView: View {
         isLoading = false
     }
 
+    // Check if we are in DEBUG mode
+    #if DEBUG
+    let debugMode = true
+    #else
+    let debugMode = false
+    #endif
+
     private func fetchPlayers() async throws -> [Player] {
-        guard let url = URL(string: "https://match-tracker-web.vercel.app/api/get-all-players") else {
+        guard let url = URL(string: debugMode ? "http://localhost:3000/api/get-all-players" : "https://match-tracker-web.vercel.app/api/get-all-players") else {
             throw URLError(.badURL)
         }
 
