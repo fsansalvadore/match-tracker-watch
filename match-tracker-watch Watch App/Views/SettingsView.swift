@@ -55,7 +55,7 @@ struct SettingsView: View {
     #endif
 
     private func fetchPlayers() async throws -> [Player] {
-        guard let url = URL(string: debugMode ? "http://localhost:3000/api/get-all-players" : "https://match-tracker-web.vercel.app/api/get-all-players") else {
+        guard let url = URL(string: debugMode ? "http://localhost:3000/api/get-all-players?leagueId=1" : "https://match-tracker-web.vercel.app/api/get-all-players?leagueId=1") else {
             throw URLError(.badURL)
         }
 

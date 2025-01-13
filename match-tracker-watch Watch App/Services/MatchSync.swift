@@ -33,7 +33,7 @@ class MatchSync {
         #endif
 
         // Create the URL
-        guard let url = URL(string: debugMode ? "http://localhost:3000/api/create-match" : "https://match-tracker-web.vercel.app/api/create-match") else {
+        guard let url = URL(string: debugMode ? "http://localhost:3000/api/create-match?leagueId=1" : "https://match-tracker-web.vercel.app/api/create-match?leagueId=1") else {
             throw URLError(.badURL)
         }
 
