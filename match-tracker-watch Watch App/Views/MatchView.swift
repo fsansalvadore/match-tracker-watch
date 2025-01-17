@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchKit
 
 struct MatchView: View {
     @Environment(\.dismiss) private var dismiss
@@ -23,17 +24,18 @@ struct MatchView: View {
     }()
     
     private var formattedTime: String {
-        let minutes = Int(timeElapsed) / 60
+        let hours = Int(timeElapsed) / 3600
+        let minutes = (Int(timeElapsed) % 3600) / 60
         let seconds = Int(timeElapsed) % 60
-        let milliseconds = Int((timeElapsed.truncatingRemainder(dividingBy: 1)) * 100)
-        return String(format: "%02d:%02d:%02d", minutes, seconds, milliseconds)
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 2) {
             Text(formattedTime)
-                .font(.system(size: 40))
+                .font(.system(size: 32))
                 .padding()
+                .monospacedDigit()
             
             HStack {
                 Button(isRunning ? "Pause" : "Start") {
