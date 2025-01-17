@@ -9,20 +9,20 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 // Custom header with gear icon
-                HStack {
-                    Spacer()
-                    Button {
-                        showingSettings = true
-                    } label: {
-                        Image(systemName: "gear")
-                            .font(.system(size: 20)) // Smaller size for the gear icon
-                            .foregroundColor(.gray) // Gray color for the gear icon
-                            .frame(maxWidth: .infinity) // Full width
-                            .padding(.vertical, 10) // Vertical padding for height
-                            .background(Color.clear) // Clear background
-                            .cornerRadius(5) // Less rounded corners
-                    }
-                }
+                // HStack {
+                //     Spacer()
+                //     Button {
+                //         showingSettings = true
+                //     } label: {
+                //         Image(systemName: "gear")
+                //             .font(.system(size: 20)) // Smaller size for the gear icon
+                //             .foregroundColor(.gray) // Gray color for the gear icon
+                //             .frame(maxWidth: .infinity) // Full width
+                //             .padding(.vertical, 10) // Vertical padding for height
+                //             .background(Color.clear) // Clear background
+                //             .cornerRadius(5) // Less rounded corners
+                //     }
+                // }
                 
                 List {
                     ForEach(matchStore.matches) { match in
@@ -41,10 +41,24 @@ struct ContentView: View {
                 .navigationTitle("Matches")
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
-                        Button {
-                            showingNewMatch = true
-                        } label: {
-                            Image(systemName: "plus.circle.fill")
+                        HStack {
+                            Button {
+                                showingNewMatch = true
+                            } label: {
+                                Image(systemName: "plus.circle.fill")
+                            }
+                            Spacer()
+                            Button {
+                                showingSettings = true
+                            } label: {
+                                Image(systemName: "gear")
+                                    .font(.system(size: 20)) // Smaller size for the gear icon
+                                    // .foregroundColor(.gray) // Gray color for the gear icon
+                                    .frame(maxWidth: .infinity) // Full width
+                                    .padding(.vertical, 10) // Vertical padding for height
+                                    .background(Color.clear) // Clear background
+                                    .cornerRadius(5) // Less rounded corners
+                            }
                         }
                     }
                 }
