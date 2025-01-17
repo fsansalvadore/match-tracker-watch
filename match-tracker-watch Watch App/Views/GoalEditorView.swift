@@ -18,31 +18,34 @@ struct GoalEditorView: View {
     }()
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 4) {
             Text(timeFormatter.string(from: timestamp) ?? "00:00:00")
-                .font(.title2)
+                .font(.headline)
             
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text("Scorer")
-                    .font(.headline)
-                
+                    .font(.callout)
+
                 Button {
                     showingScorerPicker = true
                 } label: {
                     HStack {
                         Text(selectedScorer?.name ?? "Select Player")
                             .foregroundColor(selectedScorer == nil ? .gray : .white)
+                            .font(.system(size: 12))
                         Spacer()
                         Image(systemName: "chevron.right")
                             .foregroundColor(.gray)
+                            .frame(width: 12)
                     }
                 }
                 .buttonStyle(PlainButtonStyle())
+                .padding(.bottom, 4)
             }
             
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text("Assist")
-                    .font(.headline)
+                    .font(.callout)
                 
                 Button {
                     showingAssistPicker = true
@@ -50,9 +53,11 @@ struct GoalEditorView: View {
                     HStack {
                         Text(selectedAssist?.name ?? "Select Player")
                             .foregroundColor(selectedAssist == nil ? .gray : .white)
+                            .font(.system(size: 12))
                         Spacer()
                         Image(systemName: "chevron.right")
                             .foregroundColor(.gray)
+                            .frame(width: 12)
                     }
                 }
                 .buttonStyle(PlainButtonStyle())
@@ -65,6 +70,7 @@ struct GoalEditorView: View {
                     dismiss()
                 }
                 .tint(.red)
+                .padding(2)
                 
                 Button("Save") {
                     if let scorer = selectedScorer {
@@ -74,30 +80,83 @@ struct GoalEditorView: View {
                     }
                 }
                 .tint(.green)
+                .padding(2)
                 .disabled(selectedScorer == nil)
             }
         }
         .padding()
         .sheet(isPresented: $showingScorerPicker) {
-            List(teamPlayers) { player in
-                Button {
-                    selectedScorer = player
-                    showingScorerPicker = false
-                } label: {
-                    Text(player.name)
-                        .foregroundColor(player == selectedScorer ? .accentColor : .white)
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 8) {
+                    ForEach(teamPlayers) { player in
+                        Button {
+                            selectedScorer = player
+                            showingScorerPicker = false
+                        } label: {
+                            HStack {
+                                Text(player.name)
+                                    .font(.system(size: 14))
+                                    .lineLimit(1)
+                                Spacer()
+                                
+                                if player == selectedScorer {
+                                    Image(systemName: "checkmark")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(.accentColor)
+                                }
+                            }
+                        }
+                        .buttonStyle(BorderlessButtonStyle())
+                        .foregroundColor(.primary)
+                        .padding(.horizontal, 8)
+                        .frame(height: 20)
+
+                        if player.id != teamPlayers.last?.id {
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.3))
+                                .frame(height: 0.5)
+                                .padding(.horizontal, 8)
+                        }
+                    }
                 }
+                .padding(.vertical, 8)
             }
         }
         .sheet(isPresented: $showingAssistPicker) {
-            List(teamPlayers) { player in
-                Button {
-                    selectedAssist = player
-                    showingAssistPicker = false
-                } label: {
-                    Text(player.name)
-                        .foregroundColor(player == selectedAssist ? .accentColor : .white)
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 8) {
+                    ForEach(teamPlayers) { player in
+                        Button {
+                            selectedAssist = player
+                            showingAssistPicker = false
+                        } label: {
+                            HStack {
+                                Text(player.name)
+                                    .font(.system(size: 14))
+                                    .lineLimit(1)
+                                Spacer()
+                                
+                                if player == selectedAssist {
+                                    Image(systemName: "checkmark")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(.accentColor)
+                                }
+                            }
+                        }
+                        .buttonStyle(BorderlessButtonStyle())
+                        .foregroundColor(.primary)
+                        .padding(.horizontal, 8)
+                        .frame(height: 20)
+
+                        if player.id != teamPlayers.last?.id {
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.3))
+                                .frame(height: 0.5)
+                                .padding(.horizontal, 8)
+                        }
+                    }
                 }
+                .padding(.vertical, 8)
             }
         }
     }
