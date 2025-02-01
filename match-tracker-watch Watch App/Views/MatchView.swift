@@ -16,6 +16,7 @@ struct MatchView: View {
     @State private var showingGoalEditorB = false
     @State private var pendingGoalTimestamp: TimeInterval?
     @State private var showingGoalieChangeAlert = false
+    @State private var startTime: Date?
     
     private let timeFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -142,8 +143,11 @@ struct MatchView: View {
     
     private func startMatch() {
         isRunning = true
+        startTime = Date() // Record the start time
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
-            timeElapsed += 0.01
+            if let startTime = startTime {
+                timeElapsed = Date().timeIntervalSince(startTime) // Calculate elapsed time
+            }
             
             // Check for 5-minute intervals
             let previousInterval = Int((timeElapsed - 0.01) / goalieChangeInterval)
@@ -159,11 +163,13 @@ struct MatchView: View {
         isRunning = false
         timer?.invalidate()
         timer = nil
+        startTime = nil // Reset start time
     }
     
     private func stopMatch() {
         timer?.invalidate()
         timer = nil
+        startTime = nil // Reset start time
         let match = Match(
             duration: timeElapsed,
             teamA: teamA,
