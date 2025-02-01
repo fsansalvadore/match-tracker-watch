@@ -19,7 +19,7 @@ struct GoalEditorView: View {
     
     var body: some View {
         VStack(spacing: 4) {
-            Text(timeFormatter.string(from: timestamp) ?? "00:00:00")
+            Text(timeFormatter.string(from: TimeInterval(timestamp)) ?? "00:00:00")
                 .font(.headline)
             
             VStack(alignment: .leading, spacing: 2) {

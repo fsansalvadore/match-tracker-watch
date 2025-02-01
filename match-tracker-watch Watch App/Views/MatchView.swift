@@ -15,6 +15,7 @@ struct MatchView: View {
     @State private var showingGoalEditorA = false
     @State private var showingGoalEditorB = false
     @State private var pendingGoalTimestamp: TimeInterval?
+    @State private var showingGoalieChangeAlert = false
     
     private let timeFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -22,6 +23,8 @@ struct MatchView: View {
         formatter.zeroFormattingBehavior = .pad
         return formatter
     }()
+    
+    private let goalieChangeInterval: TimeInterval = 300 // 5 minutes in seconds
     
     private var formattedTime: String {
         let hours = Int(timeElapsed) / 3600
@@ -109,7 +112,7 @@ struct MatchView: View {
         .sheet(isPresented: $showingGoalEditorA) {
             if let timestamp = pendingGoalTimestamp {
                 GoalEditorView(
-                    timestamp: timestamp,
+                    timestamp: TimeInterval(pendingGoalTimestamp ?? 0),
                     teamPlayers: teamA,
                     onSave: { goal in
                         goalsA.append(goal)
@@ -120,7 +123,7 @@ struct MatchView: View {
         .sheet(isPresented: $showingGoalEditorB) {
             if let timestamp = pendingGoalTimestamp {
                 GoalEditorView(
-                    timestamp: timestamp,
+                    timestamp: TimeInterval(pendingGoalTimestamp ?? 0),
                     teamPlayers: teamB,
                     onSave: { goal in
                         goalsB.append(goal)
@@ -128,12 +131,27 @@ struct MatchView: View {
                 )
             }
         }
+        .alert("Cambio purti", isPresented: $showingGoalieChangeAlert) {
+            Button("OK") {
+                WKInterfaceDevice.current().play(.stop)
+            }
+        } message: {
+            Text("Prossimo cambio tra 5 minuti")
+        }
     }
     
     private func startMatch() {
         isRunning = true
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
             timeElapsed += 0.01
+            
+            // Check for 5-minute intervals
+            let previousInterval = Int((timeElapsed - 0.01) / goalieChangeInterval)
+            let currentInterval = Int(timeElapsed / goalieChangeInterval)
+            
+            if currentInterval > previousInterval {
+                showGoalieChangeNotification()
+            }
         }
     }
     
@@ -155,5 +173,10 @@ struct MatchView: View {
         )
         matchStore.addMatch(match)
         showingMatchStats = true
+    }
+    
+    private func showGoalieChangeNotification() {
+        showingGoalieChangeAlert = true
+        WKInterfaceDevice.current().play(.notification)
     }
 }

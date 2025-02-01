@@ -37,7 +37,7 @@ struct MatchStatsView: View {
                                 }
                             }
                             Spacer()
-                            Text(timerFormatter.string(from: goal.timestamp) ?? "00:00:00")
+                            Text(timerFormatter.string(from: TimeInterval(goal.timestamp)) ?? "00:00:00")
                         }
                         .font(.caption)
                         .padding(.vertical, 4)
@@ -55,7 +55,7 @@ struct MatchStatsView: View {
                                 }
                             }
                             Spacer()
-                            Text(timerFormatter.string(from: goal.timestamp) ?? "00:00:00")
+                            Text(timerFormatter.string(from: TimeInterval(goal.timestamp)) ?? "00:00:00")
                         }
                         .font(.caption)
                         .padding(.vertical, 4)
