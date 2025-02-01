@@ -42,16 +42,25 @@ struct NewMatchView: View {
                 .tint(.green)
                 .disabled(teamA.isEmpty || teamB.isEmpty)
             }
-            .padding(.bottom)
         }
         .sheet(isPresented: $showingTeamAPlayers) {
             NavigationView {
-                TeamPlayersView(players: $teamA)
+                TeamPlayersView(
+                    players: $teamA,
+                    otherTeamPlayers: $teamB,
+                    teamName: "Team A",
+                    otherTeamName: "Team B"
+                )
             }
         }
         .sheet(isPresented: $showingTeamBPlayers) {
             NavigationView {
-                TeamPlayersView(players: $teamB)
+                TeamPlayersView(
+                    players: $teamB,
+                    otherTeamPlayers: $teamA,
+                    teamName: "Team B",
+                    otherTeamName: "Team A"
+                )
             }
         }
         .fullScreenCover(isPresented: $showingMatchView) {
@@ -73,7 +82,7 @@ struct TeamBox: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 8)
-        .background(Color(.darkGray).opacity(0.8))
-        .cornerRadius(12)
+        .background(Color(.darkGray).opacity(0.3))
+        .cornerRadius(6)
     }
 } 

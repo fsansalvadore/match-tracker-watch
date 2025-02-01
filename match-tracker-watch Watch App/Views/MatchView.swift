@@ -1,4 +1,5 @@
 import SwiftUI
+import WatchKit
 
 struct MatchView: View {
     @Environment(\.dismiss) private var dismiss
@@ -14,6 +15,7 @@ struct MatchView: View {
     @State private var showingGoalEditorA = false
     @State private var showingGoalEditorB = false
     @State private var pendingGoalTimestamp: TimeInterval?
+    @State private var showingGoalieChangeAlert = false
     
     private let timeFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -22,18 +24,21 @@ struct MatchView: View {
         return formatter
     }()
     
+    private let goalieChangeInterval: TimeInterval = 300 // 5 minutes in seconds
+    
     private var formattedTime: String {
-        let minutes = Int(timeElapsed) / 60
+        let hours = Int(timeElapsed) / 3600
+        let minutes = (Int(timeElapsed) % 3600) / 60
         let seconds = Int(timeElapsed) % 60
-        let milliseconds = Int((timeElapsed.truncatingRemainder(dividingBy: 1)) * 100)
-        return String(format: "%02d:%02d:%02d", minutes, seconds, milliseconds)
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 2) {
             Text(formattedTime)
-                .font(.system(size: 40))
+                .font(.system(size: 32))
                 .padding()
+                .monospacedDigit()
             
             HStack {
                 Button(isRunning ? "Pause" : "Start") {
@@ -107,7 +112,7 @@ struct MatchView: View {
         .sheet(isPresented: $showingGoalEditorA) {
             if let timestamp = pendingGoalTimestamp {
                 GoalEditorView(
-                    timestamp: timestamp,
+                    timestamp: TimeInterval(pendingGoalTimestamp ?? 0),
                     teamPlayers: teamA,
                     onSave: { goal in
                         goalsA.append(goal)
@@ -118,7 +123,7 @@ struct MatchView: View {
         .sheet(isPresented: $showingGoalEditorB) {
             if let timestamp = pendingGoalTimestamp {
                 GoalEditorView(
-                    timestamp: timestamp,
+                    timestamp: TimeInterval(pendingGoalTimestamp ?? 0),
                     teamPlayers: teamB,
                     onSave: { goal in
                         goalsB.append(goal)
@@ -126,12 +131,27 @@ struct MatchView: View {
                 )
             }
         }
+        .alert("Cambio purti", isPresented: $showingGoalieChangeAlert) {
+            Button("OK") {
+                WKInterfaceDevice.current().play(.stop)
+            }
+        } message: {
+            Text("Prossimo cambio tra 5 minuti")
+        }
     }
     
     private func startMatch() {
         isRunning = true
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
             timeElapsed += 0.01
+            
+            // Check for 5-minute intervals
+            let previousInterval = Int((timeElapsed - 0.01) / goalieChangeInterval)
+            let currentInterval = Int(timeElapsed / goalieChangeInterval)
+            
+            if currentInterval > previousInterval {
+                showGoalieChangeNotification()
+            }
         }
     }
     
@@ -153,5 +173,10 @@ struct MatchView: View {
         )
         matchStore.addMatch(match)
         showingMatchStats = true
+    }
+    
+    private func showGoalieChangeNotification() {
+        showingGoalieChangeAlert = true
+        WKInterfaceDevice.current().play(.notification)
     }
 }
